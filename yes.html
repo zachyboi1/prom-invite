@@ -10,13 +10,20 @@
     <h1>YAY! 🎉</h1>
     <h2>I'm so happy you said YES! 💖</h2>
     
-    <img src="your-picture.jpg" alt="Excited GIF" style="width: 300px; display: block; margin: auto;">
+    <img src="your-picture.jpg" alt="cute pic" style="width: 300px; display: block; margin: auto;">
 
     <audio autoplay>
-        <source src="yes-music.mp3" type="audio/mpeg">
+        <source src="music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <p><a href="prom.html">But wait... I have one more question! 👉 Click here!</a></p>
+    <!-- Button to go to the Prom Page -->
+    <button id="promButton">one more question! 💃🕺</button>
+
+    <script>
+        document.getElementById("promButton").addEventListener("click", function() {
+            window.location.href = "prom.html"; // Redirects to prom page
+        });
+    </script>
 </body>
 </html>
