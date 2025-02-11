@@ -20,7 +20,3 @@ function showNoVideo() {
         audio.play();
     });
 
- document.addEventListener("DOMContentLoaded", function () {
-        let video = document.getElementById("happy-video");
-        video.muted = true; // Ensure it's muted
-    });
