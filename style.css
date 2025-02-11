@@ -37,6 +37,14 @@ button {
     color: white;
 }
 
+ #happy-video {
+    width: 50%; /* Adjusts to 50% of its container */
+    max-width: 400px; /* Ensures it doesn't exceed 400px */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto;
+  }
+
 .center-image {
     width: 80%;
     max-width: 400px;
