@@ -15,10 +15,12 @@ function showNoVideo() {
     };
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-            const audio = document.getElementById("bg-music");
-            // Try to play the audio after a user interaction
-            document.body.addEventListener("click", () => {
-                audio.play();
-            }, { once: true }); // Ensures it only runs once
+ document.addEventListener("DOMContentLoaded", function() {
+        const music = document.getElementById("bg-music");
+        music.muted = true; // Start muted to allow autoplay
+        music.play().then(() => {
+            music.muted = false; // Unmute after it starts
+        }).catch(error => {
+            console.log("Autoplay blocked:", error);
         });
+    });
