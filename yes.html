@@ -10,19 +10,45 @@
     <h1>YAY! 🎉</h1>
     <h2>I'm so happy you said YES! 💖</h2>
     
-    <img src="your-picture.jpg" alt="cute pic" style="width: 300px; display: block; margin: auto;">
+    <!-- Centered looping video -->
+    <video id="loopingVideo" width="400" autoplay loop muted>
+        <source src="happy-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <audio autoplay>
-        <source src="music.mp3" type="audio/mpeg">
+        <source src="yes-music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <!-- Button to go to the Prom Page -->
-    <button id="promButton">one more question! 💃🕺</button>
+    <br>
+
+    <!-- Buttons for Yes and No -->
+    <button id="yesButton">Yes! 🎊</button>
+    <button id="noButton">No 😢</button>
 
     <script>
-        document.getElementById("promButton").addEventListener("click", function() {
-            window.location.href = "prom.html"; // Redirects to prom page
+        document.getElementById("yesButton").addEventListener("click", function() {
+            window.location.href = "thankyou.html"; // Redirect to thank you page
+        });
+
+        document.getElementById("noButton").addEventListener("click", function() {
+            let video = document.createElement("video");
+            video.src = "no-video.mp4"; // Replace with your video file
+            video.style.position = "fixed";
+            video.style.top = "0";
+            video.style.left = "0";
+            video.style.width = "100vw";
+            video.style.height = "100vh";
+            video.style.objectFit = "cover";
+            video.controls = false;
+            video.autoplay = true;
+
+            document.body.appendChild(video);
+
+            video.addEventListener("ended", function() {
+                document.body.removeChild(video); // Remove video after it finishes
+            });
         });
     </script>
 </body>
