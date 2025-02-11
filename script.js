@@ -19,3 +19,8 @@ function showNoVideo() {
         audio.currentTime = 46; // Start at 0:46
         audio.play();
     });
+
+ document.addEventListener("DOMContentLoaded", function () {
+        let video = document.getElementById("happy-video");
+        video.muted = true; // Ensure it's muted
+    });
