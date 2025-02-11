@@ -24,12 +24,18 @@ document.getElementById("noButton").addEventListener("mouseover", function() {
 });
 
 // Make the "No" button move away when hovered
-document.getElementById("noButton").addEventListener("mouseover", function() {
+document.getElementById("noButton").addEventListener("mouseover", moveNoButton);
+document.getElementById("noButton").addEventListener("click", moveNoButton); // Works for mobile taps
+
+function moveNoButton() {
     let button = document.getElementById("noButton");
-    let randomX = Math.floor(Math.random() * 300) - 150; // Random X movement
-    let randomY = Math.floor(Math.random() * 300) - 150; // Random Y movement
+    let maxWidth = window.innerWidth - button.clientWidth; 
+    let maxHeight = window.innerHeight - button.clientHeight;
+
+    let newX = Math.random() * maxWidth;
+    let newY = Math.random() * maxHeight;
 
     button.style.position = "absolute";
-    button.style.left = `${button.offsetLeft + randomX}px`;
-    button.style.top = `${button.offsetTop + randomY}px`;
-});
+    button.style.left = `${newX}px`;
+    button.style.top = `${newY}px`;
+}
