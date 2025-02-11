@@ -3,47 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You! 💖</title>
+    <title>Yey! I Love You ❤️</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
-<body class="thank-you-page">
-
+<body>
     <div class="container">
-        <h1>YAY! 🎉 Can't wait for our special night together, baby. ❤️</h1>
-
-        <!-- Looping Video in Center -->
-        <video id="happy-video" autoplay loop muted width="300" height="200">
+        <h1>Yey! I love you, Daney! 🥰</h1>
+        
+         <video id="happy-video" autoplay loop muted width="300" height="200">
             <source src="media/happy-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
-        <!-- Background Music -->
-        <audio id="bg-music" loop>
-            <source src="media/lover boy.mp3" type="audio/mpeg">
-        </audio>
         
+        <audio autoplay loop>
+            <source src="media/valentine.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="location.href='prom.html'">I have another question... 💌</button>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const music = document.getElementById("bg-music");
-
-            // Start muted (to allow autoplay), then wait for user interaction
-            music.muted = true;
-            music.play().then(() => {
-                console.log("Autoplay started muted.");
-            }).catch(error => {
-                console.log("Autoplay blocked:", error);
-            });
-
-            // Unmute after first user interaction (click anywhere)
-            document.addEventListener("click", function() {
-                music.muted = false;
-                console.log("Music unmuted after user interaction.");
-            }, { once: true }); // Ensures this only runs once
-        });
-    </script>
-
 </body>
 </html>
