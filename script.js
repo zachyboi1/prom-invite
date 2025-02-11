@@ -14,3 +14,8 @@ function showNoVideo() {
         popup.style.display = "none";
     };
 }
+ document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("bg-music");
+        audio.currentTime = 46; // Start at 0:46
+        audio.play();
+    });
