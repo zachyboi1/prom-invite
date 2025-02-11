@@ -1,5 +1,6 @@
 /* Make text readable on all screens */
 body {
+  background-color: #ffb6c1; /* Light Pink */
   font-size: 18px;
   text-align: center;
   margin: 0;
