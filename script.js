@@ -1,12 +1,27 @@
-document.getElementById("yes-btn").addEventListener("click", function() {
-    document.getElementById("message").textContent = "Yay! Can't wait for prom with you! 🎉💕";
-    document.getElementById("message").classList.remove("hidden");
+// Function to play sound
+function playSound(soundFile) {
+    let audio = new Audio(soundFile);
+    audio.play();
+}
+
+// Event listener for "Yes" button
+document.getElementById("yesButton").addEventListener("click", function() {
+    window.location.href = "yes.html"; // Redirect to new page
 });
 
-document.getElementById("no-btn").addEventListener("mouseover", function() {
-    let x = Math.random() * window.innerWidth - 100;
-    let y = Math.random() * window.innerHeight - 50;
-    this.style.position = "absolute";
-    this.style.left = `${x}px`;
-    this.style.top = `${y}px`;
+// Event listener for "No" button
+document.getElementById("noButton").addEventListener("click", function() {
+    playSound("no.mp3"); // Play funny/sad sound
+    alert("Oh no! But I still think you're amazing! 😢");
+});
+
+// Make the "No" button move away when hovered
+document.getElementById("noButton").addEventListener("mouseover", function() {
+    let button = document.getElementById("noButton");
+    let randomX = Math.floor(Math.random() * 300) - 150; // Random X movement
+    let randomY = Math.floor(Math.random() * 300) - 150; // Random Y movement
+
+    button.style.position = "absolute";
+    button.style.left = `${button.offsetLeft + randomX}px`;
+    button.style.top = `${button.offsetTop + randomY}px`;
 });

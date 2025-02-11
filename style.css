@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #ffdde1;
+    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,12 +12,13 @@ body {
 .container {
     background: white;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    color: #ff4d6d;
+    font-size: 2rem;
+    color: #ff4081;
 }
 
 .buttons {
@@ -25,28 +26,34 @@ h1 {
 }
 
 button {
-    font-size: 18px;
+    font-size: 1.5rem;
     padding: 10px 20px;
+    margin: 10px;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
-    margin: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-#yes-btn {
-    background-color: #ff4d6d;
+#yesButton {
+    background-color: #ff4081;
     color: white;
 }
 
-#no-btn {
-    background-color: #ddd;
-    color: black;
-    position: relative;
+#yesButton:hover {
+    background-color: #e91e63;
 }
 
-.hidden {
-    display: none;
-    font-size: 20px;
-    color: #ff4d6d;
-    margin-top: 20px;
+#noButton {
+    background-color: #ccc;
+    color: black;
+    position: absolute;
+}
+
+.center-image {
+    width: 300px; /* Adjust size if needed */
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
