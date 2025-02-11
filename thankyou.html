@@ -5,38 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You! 💖</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            text-align: center;
-            background-color: pink;
-            font-family: Arial, sans-serif;
-        }
-
-        h1, h2 {
-            font-size: 1.8em;
-            margin: 10px;
-        }
-
-        video {
-            width: 90%;
-            max-width: 400px;
-            border-radius: 10px;
-            margin: 10px;
-        }
-    </style>
+    <script defer src="script.js"></script>
 </head>
-<body>
-    <h1>Thank You for Saying Yes! 💖</h1>
-    <h2>You made my day so much better! 😊</h2>
+<body class="thank-you-page">
+    <div class="container">
+        <h1>YAY! 🎉 Thank you for saying yes! I can't wait for our special night together. ❤️</h1>
 
-    <video autoplay loop muted>
-        <source src="thankyou-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <!-- Looping Video in Center -->
+        <video id="happy-video" autoplay loop muted>
+            <source src="media/happy-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-    <audio autoplay>
-        <source src="thankyou-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+        <!-- Background Music -->
+        <audio id="bg-music" autoplay loop>
+            <source src="media/lover boy.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 </body>
 </html>
