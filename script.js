@@ -14,9 +14,11 @@ function showNoVideo() {
         popup.style.display = "none";
     };
 }
- document.addEventListener("DOMContentLoaded", function () {
-        let audio = document.getElementById("bg-music");
-        audio.currentTime = 46; // Start at 0:46
-        audio.play();
-    });
 
+document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("bg-music");
+            // Try to play the audio after a user interaction
+            document.body.addEventListener("click", () => {
+                audio.play();
+            }, { once: true }); // Ensures it only runs once
+        });
