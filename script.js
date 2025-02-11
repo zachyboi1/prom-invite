@@ -15,12 +15,15 @@ function showNoVideo() {
     };
 }
 
- document.addEventListener("DOMContentLoaded", function() {
-        const music = document.getElementById("bg-music");
-        music.muted = true; // Start muted to allow autoplay
-        music.play().then(() => {
-            music.muted = false; // Unmute after it starts
-        }).catch(error => {
-            console.log("Autoplay blocked:", error);
-        });
+document.addEventListener("DOMContentLoaded", function () {
+    const noButton = document.getElementById("noButton");
+
+    noButton.addEventListener("click", function () {
+        // Generate random small offsets (-50px to 50px)
+        const randomX = (Math.random() * 100) - 50;
+        const randomY = (Math.random() * 100) - 50;
+
+        // Apply the new position
+        noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
     });
+});
