@@ -19,6 +19,12 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-color: pink
+}
+
 button {
     font-size: 1.5rem;
     padding: 10px 20px;
