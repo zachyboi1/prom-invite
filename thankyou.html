@@ -8,11 +8,7 @@
     <script defer src="script.js"></script>
 </head>
 <body class="thank-you-page">
-    
-      </audio>
-    <source src="media/lover boy.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-      </audio>
+
     <div class="container">
         <h1>YAY! 🎉 Thank you for saying yes! I can't wait for our special night together. ❤️</h1>
 
@@ -23,10 +19,22 @@
         </video>
 
         <!-- Background Music -->
-         <audio autoplay loop>
-            <source src="media/lover boy.mp3" type="audio/mpeg">
-      
+        <audio id="bg-music" loop>
+            <source src="media/lover-boy.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
         
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("bg-music");
+            // Try to play the audio after a user interaction
+            document.body.addEventListener("click", () => {
+                audio.play();
+            }, { once: true }); // Ensures it only runs once
+        });
+    </script>
+
 </body>
 </html>
