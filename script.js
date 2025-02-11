@@ -10,9 +10,17 @@ document.getElementById("yesButton").addEventListener("click", function() {
 });
 
 // Event listener for "No" button
-document.getElementById("noButton").addEventListener("click", function() {
-    playSound("no.mp3"); // Play funny/sad sound
-    alert("Oh no! But I still think you're amazing! 😢");
+document.getElementById("noButton").addEventListener("mouseover", function() {
+    let button = this;
+    let maxWidth = window.innerWidth - button.clientWidth; // Ensure it stays inside screen width
+    let maxHeight = window.innerHeight - button.clientHeight; // Ensure it stays inside screen height
+
+    let newX = Math.random() * maxWidth;
+    let newY = Math.random() * maxHeight;
+
+    button.style.position = "absolute";
+    button.style.left = `${newX}px`;
+    button.style.top = `${newY}px`;
 });
 
 // Make the "No" button move away when hovered
